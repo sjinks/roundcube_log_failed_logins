@@ -16,8 +16,9 @@ class log_failed_logins extends rcube_plugin
 
         openlog('roundcube-login', LOG_PID, LOG_USER);
 
+        $cf     = new \CloudFlare\IpRewrite();
         $date   = gmdate('Y-m-d H:i:s');
-        $ip     = $_SERVER['REMOTE_ADDR']     ?? '-';
+        $ip     = $cf->isCloudFlare() ? $cf->getRewrittenIP() : ($_SERVER['REMOTE_ADDR'] ?? '-');
         $method = $_SERVER['REQUEST_METHOD']  ?? '-';
         $proto  = $_SERVER['SERVER_PROTOCOL'] ?? '-';
         $host   = $_SERVER['HTTP_HOST']       ?? '-';
