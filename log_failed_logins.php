@@ -1,7 +1,5 @@
 <?php
 
-require 'vendor/autoload.php';
-
 class log_failed_logins extends rcube_plugin
 {
     public function init()
