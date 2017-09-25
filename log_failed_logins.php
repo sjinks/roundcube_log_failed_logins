@@ -4,7 +4,7 @@ class log_failed_logins extends rcube_plugin
 {
     public function init()
     {
-        $this->add_hook('login_failed', array($this, 'login_failed'));
+        $this->add_hook('login_failed', [$this, 'login_failed']);
     }
 
     public function login_failed(array $args)
