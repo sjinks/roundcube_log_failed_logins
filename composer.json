@@ -1,0 +1,21 @@
+{
+	"name": "wildwolf/log_failed_logins",
+	"description": "Logs failed login attempts to syslog in the format suitable for blocklist.de",
+	"keywords": ["security", "bruteforce", "login"],
+	"type": "roundcube-plugin",
+	"license": "MIT",
+	"authors": [
+		{"name": "Volodymyr Kolesnykov", "email": "volodymyr@wildwolf.name"}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://plugins.roundcube.net"
+		}
+	],
+	"require": {
+		"php": ">=7.0",
+		"roundcube/plugin-installer": ">=0.1.6",
+		"cloudflare/cf-ip-rewrite": "^1.0"
+	}
+}
