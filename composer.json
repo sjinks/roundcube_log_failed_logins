@@ -5,12 +5,16 @@
 	"type": "roundcube-plugin",
 	"license": "MIT",
 	"authors": [
-		{"name": "Volodymyr Kolesnykov", "email": "volodymyr@wildwolf.name"}
+		{"name": "Volodymyr Kolesnykov", "email": "volodymyr@wildwolf.name", "role": "Lead"}
 	],
 	"repositories": [
 		{
 			"type": "composer",
 			"url": "https://plugins.roundcube.net"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/sjinks/roundcube_log_failed_logins.git"
 		}
 	],
 	"require": {
